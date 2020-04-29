@@ -47,6 +47,10 @@ impl Resolve for serde_json::Value {
             "null" => return Value::Null,
             _ => (),
         };
+        match serde_json::from_str(scalar_char.as_str()) {
+            Ok(value) => return value,
+            _ => (),
+        }
 
         Value::String(scalar_char)
     }
@@ -96,5 +100,11 @@ mod serde_json_value_updater_test {
         let string_value = "my string".to_string();
         let json_value = Value::resolve(string_value);
         assert_eq!("my string", json_value.as_str().unwrap());
+    }
+    #[test]
+    fn it_should_resolve_json_value_object() {
+        let string_object = r#"{"field":"value"}"#.to_string();
+        let json_value = Value::resolve(string_object);
+        assert_eq!(r#"{"field":"value"}"#, json_value.to_string());
     }
 }

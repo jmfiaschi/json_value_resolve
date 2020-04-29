@@ -21,9 +21,33 @@ extern crate json_value_resolve;
 use json_value_resolve::Resolve;
 
 {
-    let string_value = "-00010000".to_string();
-    let json_value = Value::resolve(string_value);
-    assert_eq!(-10000, json_value.as_i64().unwrap());
+  let string_value = "-00010000".to_string();
+  let json_value = Value::resolve(string_value);
+  assert_eq!(-10000, json_value.as_i64().unwrap());
+}
+
+{
+  let string_value = "-10.50".to_string();
+  let json_value = Value::resolve(string_value);
+  assert_eq!(-10.50, json_value.as_f64().unwrap());
+}
+
+{
+  let string_value = "true".to_string();
+  let json_value = Value::resolve(string_value);
+  assert_eq!(true, json_value.as_bool().unwrap());
+}
+
+{
+  let string_object = r#"{"field":"value"}"#.to_string();
+  let json_value = Value::resolve(string_object);
+  assert_eq!(r#"{"field":"value"}"#, json_value.to_string());
+}
+
+{
+  let string_value = "null".to_string();
+  let json_value = Value::resolve(string_value);
+  assert_eq!((), json_value.as_null().unwrap());
 }
 ```
 
