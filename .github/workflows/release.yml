@@ -1,11 +1,10 @@
-name: Release
+name: release
 on:
-  push:
-    branches:
-      - main
-      - beta
-      - alpha
-      
+  workflow_run:
+    workflows: ["ci","lint"]
+    types: 
+      - completed
+
 jobs:
   release:
     name: Release
