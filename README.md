@@ -10,7 +10,7 @@ Give an interface to resolve scalar to json_serde::Value.
 
  ```Toml
 [dependencies]
-json_value_resolve = "0.2"
+json_value_resolve = "1.0.2"
 ```
 
 ## Usage
