@@ -6,6 +6,7 @@ on:
     workflows: 
       - ci
       - lint
+      - pages-build-deployment
     types: 
       - completed
 
