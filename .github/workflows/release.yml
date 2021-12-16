@@ -1,8 +1,11 @@
+---
 name: release
+
 on:
   workflow_run:
-    workflows: ["ci","lint"]
-    branches: [main,alpha,beta]
+    workflows: 
+      - ci
+      - lint
     types: 
       - completed
 
