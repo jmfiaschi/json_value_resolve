@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1639757078406,
+  "lastUpdate": 1639767615287,
   "repoUrl": "https://github.com/jmfiaschi/json_value_resolve",
   "entries": {
     "Benchmark": [
@@ -1055,6 +1055,72 @@ window.BENCHMARK_DATA = {
             "name": "resolve/scalar_char",
             "value": 102,
             "range": "± 0",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jm.fiaschi@gmail.com",
+            "name": "jmfiaschi",
+            "username": "jmfiaschi"
+          },
+          "committer": {
+            "email": "jm.fiaschi@gmail.com",
+            "name": "jmfiaschi",
+            "username": "jmfiaschi"
+          },
+          "distinct": true,
+          "id": "e7515e9752c2a5f6462d558c79954ee6392eea0b",
+          "message": "fix(cicd): update version automatically",
+          "timestamp": "2021-12-17T19:57:13+01:00",
+          "tree_id": "ec953e72e46dcd2fdf01b17571b601db7ccf142e",
+          "url": "https://github.com/jmfiaschi/json_value_resolve/commit/e7515e9752c2a5f6462d558c79954ee6392eea0b"
+        },
+        "date": 1639767614302,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "resolve/scalar_null",
+            "value": 61,
+            "range": "± 4",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "resolve/scalar_unsigned",
+            "value": 48,
+            "range": "± 2",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "resolve/scalar_signed",
+            "value": 59,
+            "range": "± 4",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "resolve/scalar_float",
+            "value": 80,
+            "range": "± 8",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "resolve/scalar_float_signed",
+            "value": 67,
+            "range": "± 4",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "resolve/scalar_bool",
+            "value": 61,
+            "range": "± 3",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "resolve/scalar_char",
+            "value": 90,
+            "range": "± 4",
             "unit": "ns/iter"
           }
         ]
