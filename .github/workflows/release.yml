@@ -4,6 +4,7 @@ name: release
 on:
   workflow_run:
     workflows: ["ci"]
+    branches: [main,beta]
     types: [completed]
 
 jobs:
