@@ -78,7 +78,7 @@ jobs:
           alert-comment-cc-users: '@jmfiaschi'
           benchmark-data-dir-path: 'docs/bench/${{ env.BRANCH_NAME }}'
   release:
-    needs: ["benchmark"]
+    needs: [benchmark,integration-tests,unit-tests]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
