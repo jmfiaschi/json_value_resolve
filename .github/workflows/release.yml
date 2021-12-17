@@ -3,8 +3,7 @@ name: release
 
 on:
   workflow_run:
-    workflows: ["ci"]
-    branches: [main,beta]
+    workflows: [ci, lint]
     types: [completed]
 
 jobs:
