@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/jmfiaschi/json_value_resolve/compare/v1.0.4...v1.1.0) (2025-01-11)
+
+
+### Features
+
+* **makefile:** add ([ea98279](https://github.com/jmfiaschi/json_value_resolve/commit/ea98279d866a40bfd56cc364a1b2bd93741d7d8c))
+* **semantic:** update config ([3ab016f](https://github.com/jmfiaschi/json_value_resolve/commit/3ab016fd3d7f7c7a9ac43c1565988bb35bd18fe0))
+
 # 1.0.0 (2021-12-16)
 
 
